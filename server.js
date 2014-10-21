@@ -2,13 +2,13 @@ var express = require("express");
 var app = express();
 
 app.set("views", __dirname)
-//app.engine('html', require('ejs').renderFile);
-app.set("view engine", "jade");
+app.engine('html', require('ejs').renderFile);
+app.set("view engine", "html");
 
 app.use(express.static(__dirname + "/public"))
 
 app.get("*", function(req, res){
-    res.render("index.jade");
+    res.render("index.html");
 });
 
 app.listen(process.env.PORT, process.env.IP);
