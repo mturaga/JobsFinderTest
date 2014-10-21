@@ -1,0 +1,15 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "authors": [
+    "Maru <maruthi.turaga@gmail.com>"
+  ],
+  "description": "job finder application",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.3.0",
+    "bootstrap": "~3.2.0"
+  }
+}
