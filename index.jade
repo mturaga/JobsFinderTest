@@ -6,11 +6,12 @@ script(type="text/javascript", src="/bower_components/angular/angular.js")
 script(type="text/javascript", src="/app/app.js")
 
 body(ng-app="app")
-    .controller
-        h1 Available.@
-        div(ng-controller = "testCtrl")
-            .list-group
-                a.list-group-item(href = "#")(ng-repeat ="job in jobs")
-                    h4.list-group-item-heading {{job.title}}
-                    p.list-group-item-text {{job.description}}
+    .container
+        h1 Find Jobs
+        .well.well-compact.success
+            div(ng-controller = "testCtrl")
+                .list-group
+                    a.list-group-item(href = "#")(ng-repeat ="job in jobs")
+                        h4.list-group-item-heading {{job.title}}
+                        p.list-group-item-text {{job.description}}
             
