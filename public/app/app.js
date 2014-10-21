@@ -7,5 +7,8 @@ angular.module("app").controller("testCtrl", function($scope) {
     }, {
         title: "CEO",
         description: "The Boss"
+    },{
+        title: "CFO",
+        description: "The Bean Counter"
     }];
 });
