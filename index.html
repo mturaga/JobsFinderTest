@@ -1,20 +1,24 @@
-
+<!DOCTYPE html>
+<html>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/app/site.css">
 <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
 <script type="text/javascript" src="/app/app.js"></script>
 
-<body ng-app = "app">
-
-<div  ng-controller = "testCtrl" class="container">
-    <h1>Jobs available</h1>
-    <div ng-repeat = "job in jobs" >
-    <div class= "well well-compact">
-        <p>{{job.title}}</p>
-        <small>{{job.description}}</small>
-        <p />
-        <div ng-repeat = "n in job.tags" class = "badge right-buffer">{{n}}  </div>
-    </div>
-    </div>
-</div>
-</body>
+    <body>
+        <div ng-app="app">
+            <div ng-controller="testCtrl" class="container">
+                <h1>Jobs available</h1>
+                <div ng-repeat="job in jobs">
+                    <div class="well well-compact">
+                        <p>{{job.title}}</p>
+                        <small>{{job.description}}</small>
+                        <p />
+                        <div ng-repeat="n in job.tags" class="badge right-buffer">{{n}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
