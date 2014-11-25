@@ -4,21 +4,37 @@
 <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/app/site.css">
 <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-<script type="text/javascript" src="/app/app.js"></script>
 
-    <body>
-        <div ng-app="app">
-            <div ng-controller="testCtrl" class="container">
-                <h1>Jobs available</h1>
-                <div ng-repeat="job in jobs">
-                    <div class="well well-compact">
-                        <p>{{job.title}}</p>
-                        <small>{{job.description}}</small>
-                        <p />
-                        <div ng-repeat="n in job.tags" class="badge right-buffer">{{n}}</div>
-                    </div>
+<script type="text/javascript" src="/app/app.js"></script>
+<script type="text/javascript" src="/app/TestDirective.js"></script>
+<script type="text/javascript" src="/app/directives/dropdown.js"></script>
+
+<body>
+    <div ng-app="app">
+        <div ng-controller="testCtrl" class="container">
+            <h1>Jobs available</h1>
+            <div ng-repeat="job in jobs">
+                <div class="well well-compact">
+                    <p>{{job.title}}</p>
+                    <small>{{job.description}}</small>
+                    <p />
+                    <div ng-repeat="n in job.tags" class="badge right-buffer">{{n}}</div>
                 </div>
             </div>
+            
+            <ng-dropdown label= "Categories" data = "categories" title="foo"></ng-dropdown>
+            
         </div>
-    </body>
+        <div class="container">
+            <my-test>
+                
+            </my-test>
+            
+        </div>
+
+    </div>
+
+
+</body>
+
 </html>
